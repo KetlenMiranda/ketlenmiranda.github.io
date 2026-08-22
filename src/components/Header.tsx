@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { linksNavegacao } from '../data/navigationLinks';
+import MenuButton from './MenuButton';
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -15,28 +16,10 @@ export default function Header() {
   return (
     <header className="relative w-full bg-primary">
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
-        <button
-          type="button"
-          className="
-            rounded p-2 text-white transition-colors
-            hover:bg-white/10
-            focus-visible:outline-none
-            focus-visible:ring-2
-            focus-visible:ring-white
-            md:hidden
-          "
-          aria-label={menuAberto ? 'Fechar menu' : 'Abrir menu'}
-          aria-expanded={menuAberto}
-          aria-controls="menu-principal"
-          onClick={alternarMenu}
-        >
-          <span
-            className="text-2xl leading-none"
-            aria-hidden="true"
-          >
-            ☰
-          </span>
-        </button>
+        <MenuButton
+          menuAberto={menuAberto}
+          onAlternar={alternarMenu}
+        />
 
         <nav
           id="menu-principal"
@@ -61,15 +44,18 @@ export default function Header() {
                   className={`
                     block w-full px-3 py-2
                     text-center text-sm font-medium
-                    transition-colors
+                    transition-all duration-200
+                    active:scale-95
+                    active:shadow-inner
                     focus-visible:outline-none
                     focus-visible:ring-2
                     focus-visible:ring-white
                     md:w-auto
-                    ${
-                      link.destaque
-                        ? 'rounded-full bg-white text-slate-900 hover:bg-slate-200'
-                        : 'rounded text-white hover:bg-white/10'
+                    
+                    // cor no botão de contato
+                    ${link.destaque
+                      ? 'rounded-full bg-white text-slate-900 hover:bg-slate-200 active:bg-slate-300'
+                      : 'rounded text-white hover:bg-white/10 active:bg-white/20'
                     }
                   `}
                   onClick={fecharMenu}
