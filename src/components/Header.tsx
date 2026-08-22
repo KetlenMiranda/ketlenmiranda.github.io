@@ -1,11 +1,5 @@
 import { useState } from 'react';
-
-const linksNavegacao = [
-  { texto: 'Sobre Mim', href: '#sobre-mim' },
-  { texto: 'Habilidades', href: '#habilidades' },
-  { texto: 'Certificados', href: '#certificados' },
-  { texto: 'Projetos', href: '#projetos' },
-];
+import { linksNavegacao } from '../data/navigationLinks';
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -64,40 +58,26 @@ export default function Header() {
               >
                 <a
                   href={link.href}
-                  className="
-                    block w-full rounded px-3 py-2
-                    text-center text-sm font-medium text-white
-                    transition-colors hover:bg-white/10
+                  className={`
+                    block w-full px-3 py-2
+                    text-center text-sm font-medium
+                    transition-colors
                     focus-visible:outline-none
                     focus-visible:ring-2
                     focus-visible:ring-white
                     md:w-auto
-                  "
+                    ${
+                      link.destaque
+                        ? 'rounded-full bg-white text-slate-900 hover:bg-slate-200'
+                        : 'rounded text-white hover:bg-white/10'
+                    }
+                  `}
                   onClick={fecharMenu}
                 >
                   {link.texto}
                 </a>
               </li>
             ))}
-
-            <li className="w-full md:w-auto">
-              <a
-                href="#entre-em-contato"
-                className="
-                  block w-full rounded-full bg-white
-                  px-3 py-2 text-center text-sm
-                  font-medium text-slate-900
-                  transition-colors hover:bg-slate-200
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-white
-                  md:w-auto
-                "
-                onClick={fecharMenu}
-              >
-                Entre em contato
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
