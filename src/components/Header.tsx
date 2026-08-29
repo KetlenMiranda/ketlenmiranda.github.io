@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="relative w-full bg-primary">
+    <header className="relative w-full border-b border-border bg-primary">
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
         <MenuButton
           menuAberto={menuAberto}
@@ -42,21 +42,19 @@ export default function Header() {
                 <a
                   href={link.href}
                   className={`
-                    block w-full px-3 py-2
-                    text-center text-sm font-medium
-                    transition-all duration-200
-                    active:scale-95
-                    active:shadow-inner
-                    focus-visible:outline-none
-                    focus-visible:ring-2
-                    focus-visible:ring-white
-                    md:w-auto
-                    
-                    // cor no botão de contato
-                    ${link.destaque
-                      ? 'rounded-full bg-white text-slate-900 hover:bg-slate-200 active:bg-slate-300'
-                      : 'rounded text-white hover:bg-white/10 active:bg-white/20'
-                    }
+                       block w-full border-b-2 border-transparent
+                        px-3 py-2 text-center
+                        text-sm font-medium text-foreground
+                        transition-colors duration-200
+                        hover:border-accent
+                        hover:text-accent
+                        focus-visible:border-accent
+                        focus-visible:text-accent
+                        focus-visible:outline-none
+                        focus-visible:ring-2
+                        focus-visible:ring-accent
+                        md:w-auto
+                                        
                   `}
                   onClick={fecharMenu}
                 >
