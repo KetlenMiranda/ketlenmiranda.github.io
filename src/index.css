@@ -4,5 +4,10 @@
 
 @theme {
     --font-sans: 'Inter', sans-serif;
-    --color-primary: #913FDD;
+    --color-primary: #D8D8D8;
+    --color-surface-dark: #18131d;
+    --color-accent: #7251b5;
+    --color-foreground: #19171b;
+    --color-muted: #5f5964;
+    --color-border: #c8c1cc;
 }
