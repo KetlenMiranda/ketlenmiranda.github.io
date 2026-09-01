@@ -8,15 +8,11 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-90 text-slate-900">
+    <>
       <Header />
       <Hero />
       <SobreMim />
-      <Habilidades />
-      <Certificados />
-      <Projetos />
-      <Footer />
-    </div>
+    </>
   );
 }
 
