@@ -8,13 +8,14 @@ export default function SectionTitle({ id, title }: SectionTitleProps) {
     <h2
       id={id}
       className='
-        mx-auto w-fit
+        mx-auto w-fit max-w-full
         border-2 border-surface-dark
-        px-8 py-4
-        text-center text-xl font-bold
-        uppercase tracking-[0.35em]
+        px-4 py-3
+        text-center text-base font-bold
+        uppercase tracking-[0.2em]
         text-foreground
-        sm:border-4 sm:px-12 sm:text-2xl
+        sm:border-4 sm:px-8 sm:py-4
+        sm:text-xl sm:tracking-[0.35em]
       '
     >
       {title}
