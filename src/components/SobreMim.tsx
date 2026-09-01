@@ -1,6 +1,8 @@
 import type { IconType } from 'react-icons';
 import { FaCode, FaGraduationCap } from 'react-icons/fa';
 
+import SectionTitle from './SectionTitle';
+
 type InformacaoSobreMim = {
   titulo: string;
   destaque: string;
@@ -38,20 +40,7 @@ export default function SobreMim() {
           md:px-16
         '
       >
-        <h2
-          id='titulo-sobre-mim'
-          className='
-            mx-auto w-fit
-            border-2 border-surface-dark
-            px-8 py-4
-            text-center text-xl font-bold
-            uppercase tracking-[0.35em]
-            text-foreground
-            sm:border-4 sm:px-12 sm:text-2xl
-          '
-        >
-          Sobre mim
-        </h2>
+        <SectionTitle id='titulo-sobre-mim' title='Sobre mim' />
 
         <p
           className='
@@ -78,10 +67,7 @@ export default function SobreMim() {
             return (
               <li
                 key={informacao.titulo}
-                className='
-                  flex flex-col items-center
-                  text-center
-                '
+                className='flex flex-col items-center text-center'
               >
                 <div
                   className='
@@ -96,6 +82,7 @@ export default function SobreMim() {
                     focusable='false'
                   />
                 </div>
+
                 <div className='text-center'>
                   <h3
                     className='
