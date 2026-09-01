@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { linksNavegacao } from '../data/navigationLinks';
+import MenuButton from './MenuButton';
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -13,30 +14,12 @@ export default function Header() {
   };
 
   return (
-    <header className="relative w-full bg-primary">
+    <header className="relative w-full border-b border-border bg-primary">
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
-        <button
-          type="button"
-          className="
-            rounded p-2 text-white transition-colors
-            hover:bg-white/10
-            focus-visible:outline-none
-            focus-visible:ring-2
-            focus-visible:ring-white
-            md:hidden
-          "
-          aria-label={menuAberto ? 'Fechar menu' : 'Abrir menu'}
-          aria-expanded={menuAberto}
-          aria-controls="menu-principal"
-          onClick={alternarMenu}
-        >
-          <span
-            className="text-2xl leading-none"
-            aria-hidden="true"
-          >
-            ☰
-          </span>
-        </button>
+        <MenuButton
+          menuAberto={menuAberto}
+          onAlternar={alternarMenu}
+        />
 
         <nav
           id="menu-principal"
@@ -59,18 +42,19 @@ export default function Header() {
                 <a
                   href={link.href}
                   className={`
-                    block w-full px-3 py-2
-                    text-center text-sm font-medium
-                    transition-colors
-                    focus-visible:outline-none
-                    focus-visible:ring-2
-                    focus-visible:ring-white
-                    md:w-auto
-                    ${
-                      link.destaque
-                        ? 'rounded-full bg-white text-slate-900 hover:bg-slate-200'
-                        : 'rounded text-white hover:bg-white/10'
-                    }
+                       block w-full border-b-2 border-transparent
+                        px-3 py-2 text-center
+                        text-sm font-medium text-foreground
+                        transition-colors duration-200
+                        hover:border-accent
+                        hover:text-accent
+                        focus-visible:border-accent
+                        focus-visible:text-accent
+                        focus-visible:outline-none
+                        focus-visible:ring-2
+                        focus-visible:ring-accent
+                        md:w-auto
+                                        
                   `}
                   onClick={fecharMenu}
                 >
