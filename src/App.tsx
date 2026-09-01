@@ -13,6 +13,7 @@ function App() {
       <Hero />
       <SobreMim />
       <Certificados />
+      <Habilidades />
     </>
   );
 }
