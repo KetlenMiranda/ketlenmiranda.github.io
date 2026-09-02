@@ -8,11 +8,13 @@ import {
   SiFigma,
   SiGit,
   SiGithub,
+  SiGitlab,
   SiHtml5,
   SiJavascript,
   SiLaravel,
   SiMysql,
   SiPhp,
+  SiPostgresql,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -97,14 +99,25 @@ export const gruposHabilidades: GrupoHabilidades[] = [
     ],
   },
   {
-    id: 'ferramentas-dados',
-    titulo: 'Ferramentas e dados',
+    id: 'bancos-de-dados',
+    titulo: 'Bancos de dados',
     habilidades: [
       {
         nome: 'MySQL',
         icone: SiMysql,
         cor: '#4479A1',
       },
+      {
+        nome: 'PostgreSQL',
+        icone: SiPostgresql,
+        cor: '#4169E1',
+      },
+    ],
+  },
+  {
+    id: 'ferramentas',
+    titulo: 'Ferramentas',
+    habilidades: [
       {
         nome: 'Git',
         icone: SiGit,
@@ -114,6 +127,11 @@ export const gruposHabilidades: GrupoHabilidades[] = [
         nome: 'GitHub',
         icone: SiGithub,
         cor: '#181717',
+      },
+      {
+        nome: 'GitLab',
+        icone: SiGitlab,
+        cor: '#FC6D26',
       },
       {
         nome: 'Docker',
@@ -134,7 +152,7 @@ export const gruposHabilidades: GrupoHabilidades[] = [
   },
 ];
 
-export const conhecimentosComplementares = [
+export const conhecimentosComplementares: string[] = [
   'SOLID',
   'MVC',
   'Design Patterns',
