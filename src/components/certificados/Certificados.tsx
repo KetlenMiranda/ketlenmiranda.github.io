@@ -2,9 +2,8 @@ import { useState } from 'react';
 
 import { certificados, type Certificado } from '../../data/certificadosData';
 
+import CardDetalhes from '../CardDetalhes';
 import SectionTitle from '../SectionTitle';
-
-import CertificadoCard from './CertificadoCard';
 import CertificadoModal from './CertificadoModal';
 
 export default function Certificados() {
@@ -20,7 +19,7 @@ export default function Certificados() {
       <div
         className='
           mx-auto w-full max-w-7xl
-          px-6 py-16
+          px-4 py-16
           sm:px-10 sm:py-20
           md:px-16
         '
@@ -44,15 +43,23 @@ export default function Certificados() {
           className='
             mx-auto mt-12 grid max-w-5xl
             grid-cols-1 gap-6
-            md:grid-cols-2
+            sm:grid-cols-2
+            lg:grid-cols-3
           '
         >
           {certificados.map((certificado) => (
-            <CertificadoCard
-              key={certificado.id}
-              certificado={certificado}
-              onVerDetalhes={setCertificadoSelecionado}
-            />
+            <li key={certificado.id} className='h-full min-w-0'>
+              <CardDetalhes
+                id={`certificado-${certificado.id}`}
+                categoria={certificado.categoria}
+                titulo={certificado.titulo}
+                capa={certificado.capa}
+                capaAlt={certificado.capaAlt}
+                modalId={`modal-certificado-${certificado.id}`}
+                modoImagem='contain'
+                onVerDetalhes={() => setCertificadoSelecionado(certificado)}
+              />
+            </li>
           ))}
         </ul>
       </div>

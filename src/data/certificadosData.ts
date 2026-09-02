@@ -10,7 +10,7 @@ import apresentacaoPandemia3 from '../assets/certificados/pibic_pandemia/apresen
 
 import certificadoTcc from '../assets/certificados/tcc/certificado_tcc.png';
 import apresentacaoTcc from '../assets/certificados/tcc/apresentacao_tcc.png';
-import bancaTcc from '../assets/certificados/tcc/tcc_banca.png';
+import tccBanca from '../assets/certificados/tcc/tcc_banca.png';
 
 export type DetalheCertificado = {
   rotulo: string;
@@ -32,7 +32,8 @@ export type Certificado = {
   categoria: string;
   titulo: string;
   instituicao: string;
-  imagem: string;
+  capa: string;
+  capaAlt: string;
   linkCertificado?: string;
   detalhes: DetalheCertificado[];
   destaques: DestaqueCertificado[];
@@ -46,7 +47,8 @@ export const certificados: Certificado[] = [
     titulo:
       'Impactos da pandemia (COVID-19) na vida escolar de meninas no Brasil: fatores históricos e sociais que interseccionam classe, gênero e raça',
     instituicao: 'Instituto Federal de Goiás — IFG',
-    imagem: certificadoPandemia,
+    capa: certificadoPandemia,
+    capaAlt: 'Certificado da pesquisa sobre os impactos da pandemia',
     detalhes: [
       {
         rotulo: 'Evento',
@@ -84,7 +86,8 @@ export const certificados: Certificado[] = [
     titulo:
       'As identidades tecnológicas do público EJA do Instituto Federal de Goiás, campus Formosa',
     instituicao: 'Instituto Federal de Goiás — IFG',
-    imagem: certificadoEja,
+    capa: certificadoEja,
+    capaAlt: 'Certificado da pesquisa sobre o público EJA do IFG',
     detalhes: [
       {
         rotulo: 'Apresentação em Goiânia',
@@ -113,10 +116,17 @@ export const certificados: Certificado[] = [
   },
   {
     id: 'tcc',
+
     categoria: 'Trabalho de Conclusão de Curso',
+
     titulo: 'Revisão Sistemática da Literatura Apoiada por Sistema Web',
+
     instituicao: 'Instituto Federal de Goiás — IFG',
-    imagem: certificadoTcc,
+
+    capa: certificadoTcc,
+
+    capaAlt: 'Certificado do Trabalho de Conclusão de Curso Methodus RSL',
+
     detalhes: [
       {
         rotulo: 'Tipo',
@@ -127,15 +137,17 @@ export const certificados: Certificado[] = [
         valor: 'Análise e Desenvolvimento de Sistemas',
       },
     ],
+
     destaques: [],
+
     fotos: [
       {
         src: apresentacaoTcc,
         alt: 'Apresentação do Trabalho de Conclusão de Curso',
       },
       {
-        src: bancaTcc,
-        alt: 'Registro da banca de avaliação do Trabalho de Conclusão de Curso',
+        src: tccBanca,
+        alt: 'Registro da banca do Trabalho de Conclusão de Curso',
       },
     ],
   },
