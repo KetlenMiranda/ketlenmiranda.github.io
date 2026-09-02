@@ -4,7 +4,7 @@ import SobreMim from './components/SobreMim';
 import Habilidades from './components/habilidades/Habilidades';
 import Certificados from './components/certificados/Certificados';
 import Projetos from './components/projetos/Projetos';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <Certificados />
       <Habilidades />
       <Projetos />
+      <Footer />
     </>
   );
 }
