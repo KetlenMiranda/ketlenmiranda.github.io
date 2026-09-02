@@ -31,10 +31,5 @@ export const linksNavegacao: LinkNavegacao[] = [
     href: '#projetos',
     exibirNoRodape: true,
   },
-  {
-    texto: 'Contato',
-    href: '#contato',
-    destaque: true,
-    exibirNoRodape: false,
-  },
+
 ];
