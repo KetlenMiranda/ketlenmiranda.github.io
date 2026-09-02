@@ -1,4 +1,4 @@
-import fotoHero from '../assets/Hero/fotoHero.png';
+import fotoHero from '../assets/hero/fotoHero.png';
 import SocialLinks from './SocialLinks';
 
 export default function Hero() {

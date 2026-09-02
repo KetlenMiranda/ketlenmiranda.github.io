@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 import SobreMim from './components/SobreMim';
 import Habilidades from './components/Habilidades';
 import Certificados from './components/certificados/Certificados';
-import Projetos from './components/Projetos';
+import Projetos from './components/projetos/Projetos';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
       <Hero />
       <SobreMim />
       <Certificados />
+      <Habilidades />
+      <Projetos />
     </>
   );
 }
