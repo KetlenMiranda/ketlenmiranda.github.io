@@ -4,7 +4,7 @@ import { FaCss3Alt } from 'react-icons/fa';
 
 import {
   SiBootstrap,
-  SiDocker,
+ /* SiDocker,*/
   SiFigma,
   SiGit,
   SiGithub,
@@ -133,11 +133,11 @@ export const gruposHabilidades: GrupoHabilidades[] = [
         icone: SiGitlab,
         cor: '#FC6D26',
       },
-      {
+     /* {
         nome: 'Docker',
         icone: SiDocker,
         cor: '#2496ED',
-      },
+      },*/
       {
         nome: 'Vite',
         icone: SiVite,

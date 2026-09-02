@@ -48,8 +48,8 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
     >
       <article
         className='
-          relative max-h-[90vh]
-          w-full max-w-4xl
+          relative max-h-[92vh]
+          w-full max-w-6xl
           overflow-y-auto rounded-2xl
           border border-border
           bg-white shadow-2xl
@@ -76,11 +76,10 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
 
         <div
           className='
-    space-y-8 p-5 pt-16
-    sm:p-8 sm:pt-16
-  '
+            space-y-8 p-5 pt-16
+            sm:p-8 sm:pt-16
+          '
         >
-          {' '}
           <header>
             <p
               className='
@@ -112,6 +111,7 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
               {projeto.descricao}
             </p>
           </header>
+
           {projeto.aviso && (
             <aside
               className='
@@ -124,7 +124,8 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
               </p>
             </aside>
           )}
-          {projeto.detalhes?.length > 0 && (
+
+          {projeto.detalhes.length > 0 && (
             <section>
               <h3
                 className='
@@ -161,7 +162,8 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
               </dl>
             </section>
           )}
-          {projeto.tecnologias?.length > 0 && (
+
+          {projeto.tecnologias.length > 0 && (
             <section>
               <h3
                 className='
@@ -188,7 +190,8 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
               </ul>
             </section>
           )}
-          {projeto.funcionalidades?.length > 0 && (
+
+          {projeto.funcionalidades.length > 0 && (
             <section>
               <h3
                 className='
@@ -222,28 +225,71 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
               </ul>
             </section>
           )}
-          {projeto.fotos?.length > 0 && (
+
+          {projeto.demonstracao && (
             <section
-              className='
-      border-t border-border pt-8
-    '
+              aria-labelledby={`jogo-projeto-${projeto.id}`}
+              className='border-t border-border pt-8'
+            >
+              <h3
+                id={`jogo-projeto-${projeto.id}`}
+                className='
+                  text-sm font-bold uppercase
+                  tracking-[0.15em] text-foreground
+                '
+              >
+                Experimente o projeto
+              </h3>
+
+              <p className='mt-2 text-sm leading-relaxed text-muted'>
+                Clique dentro do jogo para ativar os controles. Recomendado para
+                computadores.
+              </p>
+
+              <div
+                className='
+                  mt-5 overflow-hidden rounded-xl
+                  border border-border bg-black
+                  shadow-md
+                '
+              >
+                <iframe
+                  src={projeto.demonstracao}
+                  title={`Jogar ${projeto.titulo}`}
+                  loading='lazy'
+                  allow='autoplay; fullscreen; gamepad'
+                  allowFullScreen
+                  referrerPolicy='strict-origin-when-cross-origin'
+                  className='
+                    block aspect-video
+                    min-h-[360px] w-full
+                    md:min-h-[520px]
+                  '
+                />
+              </div>
+            </section>
+          )}
+
+          {projeto.fotos.length > 0 && (
+            <section
               aria-labelledby={`fotos-projeto-${projeto.id}`}
+              className='border-t border-border pt-8'
             >
               <h3
                 id={`fotos-projeto-${projeto.id}`}
                 className='
-        text-sm font-bold uppercase
-        tracking-[0.15em] text-foreground
-      '
+                  text-sm font-bold uppercase
+                  tracking-[0.15em] text-foreground
+                '
               >
                 Imagens do sistema
               </h3>
 
               <ul
                 className='
-        mt-5 grid grid-cols-1 gap-5
-        md:grid-cols-2
-      '
+                  mt-5 grid grid-cols-1 gap-5
+                  md:grid-cols-2
+                '
               >
                 {projeto.fotos.map((foto) => (
                   <li key={foto.src}>
@@ -253,23 +299,22 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
                       rel='noreferrer'
                       aria-label={`${foto.alt}. Abrir imagem em uma nova guia`}
                       className='
-              block overflow-hidden rounded-xl
-              border border-border bg-primary/30
-              transition-shadow
-              hover:shadow-md
-              focus-visible:outline-none
-              focus-visible:ring-2
-              focus-visible:ring-accent
-            '
+                        block overflow-hidden rounded-xl
+                        border border-border bg-primary/30
+                        transition-shadow hover:shadow-md
+                        focus-visible:outline-none
+                        focus-visible:ring-2
+                        focus-visible:ring-accent
+                      '
                     >
                       <img
                         src={foto.src}
                         alt={foto.alt}
                         loading='lazy'
                         className='
-                aspect-video w-full
-                object-contain
-              '
+                          aspect-video w-full
+                          object-contain
+                        '
                       />
                     </a>
                   </li>
@@ -277,46 +322,33 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
               </ul>
             </section>
           )}
-          {(projeto.repositorio || projeto.demonstracao) && (
+
+          {projeto.repositorio && (
             <footer
               className='
                 flex flex-wrap gap-3
                 border-t border-border pt-6
               '
             >
-              {projeto.demonstracao && (
-                <a
-                  href={projeto.demonstracao}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='
-                    inline-flex min-h-11 items-center
-                    justify-center rounded-lg
-                    bg-accent px-5 py-2
-                    text-sm font-semibold text-white
-                  '
-                >
-                  Ver demonstração
-                </a>
-              )}
-
-              {projeto.repositorio && (
-                <a
-                  href={projeto.repositorio}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='
-                    inline-flex min-h-11 items-center
-                    justify-center rounded-lg
-                    border border-accent
-                    px-5 py-2 text-sm
-                    font-semibold text-accent
-                    hover:bg-accent hover:text-white
-                  '
-                >
-                  Ver repositório
-                </a>
-              )}
+              <a
+                href={projeto.repositorio}
+                target='_blank'
+                rel='noreferrer'
+                className='
+                  inline-flex min-h-11 items-center
+                  justify-center rounded-lg
+                  border border-accent
+                  px-5 py-2 text-sm
+                  font-semibold text-accent
+                  transition-colors
+                  hover:bg-accent hover:text-white
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-accent
+                '
+              >
+                Ver repositório
+              </a>
             </footer>
           )}
         </div>
