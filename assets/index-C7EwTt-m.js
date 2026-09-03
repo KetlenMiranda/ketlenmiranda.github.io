@@ -162,11 +162,7 @@ Error generating stack: `+e.message+`
           px-6 py-16\r
           sm:px-10 sm:py-20\r
           md:px-16\r
-        `,children:[(0,x.jsxs)(`div`,{"aria-hidden":`true`,className:`mb-14 flex items-center justify-center gap-2`,children:[(0,x.jsx)(`span`,{className:`h-0.5 w-7 bg-surface-dark`}),(0,x.jsx)(`span`,{className:`font-bold tracking-[-0.2em] text-surface-dark`,children:`⌄⌄⌄`}),(0,x.jsx)(`span`,{className:`h-0.5 w-7 bg-surface-dark`})]}),(0,x.jsx)(be,{id:`titulo-habilidades`,title:`Habilidades`}),(0,x.jsx)(`p`,{id:`descricao-habilidades`,className:`\r
-            mx-auto mt-7 max-w-2xl\r
-            text-center text-base leading-relaxed\r
-            text-muted\r
-          `,children:`Tecnologias, ferramentas e conceitos que utilizo no desenvolvimento de aplicações web.`}),(0,x.jsxs)(`ul`,{className:`\r
+        `,children:[(0,x.jsxs)(`div`,{"aria-hidden":`true`,className:`mb-14 flex items-center justify-center gap-2`,children:[(0,x.jsx)(`span`,{className:`h-0.5 w-7 bg-surface-dark`}),(0,x.jsx)(`span`,{className:`font-bold tracking-[-0.2em] text-surface-dark`,children:`⌄⌄⌄`}),(0,x.jsx)(`span`,{className:`h-0.5 w-7 bg-surface-dark`})]}),(0,x.jsx)(be,{id:`titulo-habilidades`,title:`Habilidades`}),(0,x.jsxs)(`ul`,{className:`\r
             mx-auto mt-12 max-w-6xl\r
             overflow-hidden rounded-xl\r
             border border-border\r
