@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="noindex" />
+
+    <title>Página não encontrada | Ketlen Miranda</title>
+
+    <style>
+      :root {
+        --color-primary: #d8d8d8;
+        --color-accent: #7251b5;
+        --color-foreground: #19171b;
+        --color-muted: #5f5964;
+        --color-white: #ffffff;
+        --color-focus: #b89ee8;
+
+        font-family: Inter, Arial, Helvetica, sans-serif;
+
+        color: var(--color-foreground);
+        background-color: var(--color-primary);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        color: var(--color-foreground);
+        background-color: var(--color-primary);
+      }
+
+      main {
+        width: 100%;
+        max-width: 680px;
+        text-align: center;
+      }
+
+      .codigo {
+        margin: 0;
+        color: var(--color-accent);
+        font-size: clamp(5rem, 20vw, 10rem);
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      h1 {
+        margin: 24px 0 0;
+        color: var(--color-foreground);
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+      }
+
+      .descricao {
+        max-width: 540px;
+        margin: 20px auto 0;
+        color: var(--color-muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .botao {
+        min-height: 48px;
+        margin-top: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border: 2px solid var(--color-accent);
+        border-radius: 10px;
+        color: var(--color-white);
+        background-color: var(--color-accent);
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          background-color 200ms ease,
+          color 200ms ease,
+          transform 200ms ease;
+      }
+
+      .botao:hover {
+        color: var(--color-accent);
+        background-color: transparent;
+        transform: translateY(-2px);
+      }
+
+      .botao:focus-visible {
+        outline: 3px solid var(--color-focus);
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <p class="codigo" aria-hidden="true">404</p>
+
+      <h1>Página não encontrada</h1>
+
+      <p class="descricao">
+        O endereço que você tentou acessar não existe ou pode ter sido alterado.
+        Você pode retornar ao início do meu portfólio.
+      </p>
+
+      <a class="botao" href="/"> Voltar para o início </a>
+    </main>
+  </body>
+</html>
