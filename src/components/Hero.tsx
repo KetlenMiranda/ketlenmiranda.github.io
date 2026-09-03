@@ -74,21 +74,21 @@ export default function Hero() {
               </a>
 
               <a
-                href='/curriculo-ketlen-miranda.pdf'
-                download
+                href='/pdf/CV_Ketlen_Miranda_FullStack.pdf'
+                download='CV_Ketlen_Miranda_FullStack.pdf'
                 className='
-                  inline-flex min-h-12 w-full
-                  items-center justify-center gap-2
-                  rounded-lg px-5 py-3
-                  font-semibold text-accent
-                  transition-colors duration-200
-                  hover:bg-accent/10
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-accent
-                  focus-visible:ring-offset-2
-                  sm:w-auto
-                '
+                inline-flex min-h-12 w-full
+                items-center justify-center gap-2
+                rounded-lg px-5 py-3
+                font-semibold text-accent
+                transition-colors duration-200
+                hover:bg-accent/10
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-accent
+                focus-visible:ring-offset-2
+                sm:w-auto
+              '
               >
                 ↓ Baixar currículo
               </a>
