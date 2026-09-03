@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+
+import SocialLinks, { linksSociais } from '../SocialLinks';
 
 import { linksNavegacao } from '../../data/navigationLinks';
 
@@ -14,6 +15,8 @@ export default function Footer() {
     (link) => link.exibirNoRodape !== false,
   );
 
+  const linkEmail = linksSociais.find((link) => link.nome === 'E-mail');
+
   return (
     <>
       <footer
@@ -26,13 +29,13 @@ export default function Footer() {
       >
         <div
           className='
-          mx-auto w-full max-w-[100rem]
-          px-6 py-12
-          sm:px-10
-          lg:px-12 lg:py-14
-          xl:px-16
-          2xl:px-20
-        '
+            mx-auto w-full max-w-[100rem]
+            px-6 py-12
+            sm:px-10
+            lg:px-12 lg:py-14
+            xl:px-16
+            2xl:px-20
+          '
         >
           <div
             className='
@@ -111,69 +114,23 @@ export default function Footer() {
                 Contato
               </h2>
 
-              <a
-                href='mailto:ketlencostadev@gmail.com'
-                className='
-                  mt-5 inline-block text-sm
-                  text-white/80 transition-colors
-                  hover:text-accent
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-accent
-                '
-              >
-                ketlencostadev@gmail.com
-              </a>
+              {linkEmail && (
+                <a
+                  href={linkEmail.href}
+                  className='
+                    mt-5 inline-block text-sm
+                    text-white/80 transition-colors
+                    hover:text-accent
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-accent
+                  '
+                >
+                  ketlencostadev@gmail.com
+                </a>
+              )}
 
-              <ul className='mt-5 flex justify-center gap-4'>
-                <li>
-                  <a
-                    href='COLOQUE-AQUI-SEU-LINKEDIN'
-                    target='_blank'
-                    rel='noreferrer'
-                    aria-label='Acessar perfil de Ketlen no LinkedIn'
-                    className='
-                      flex h-11 w-11 items-center
-                      justify-center rounded-full
-                      border border-accent
-                      text-xl text-white
-                      transition-colors
-                      hover:bg-accent
-                      focus-visible:outline-none
-                      focus-visible:ring-2
-                      focus-visible:ring-accent
-                      focus-visible:ring-offset-2
-                      focus-visible:ring-offset-surface-dark
-                    '
-                  >
-                    <FaLinkedinIn aria-hidden='true' />
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href='https://github.com/KetlenMiranda'
-                    target='_blank'
-                    rel='noreferrer'
-                    aria-label='Acessar perfil de Ketlen no GitHub'
-                    className='
-                      flex h-11 w-11 items-center
-                      justify-center rounded-full
-                      border border-accent
-                      text-xl text-white
-                      transition-colors
-                      hover:bg-accent
-                      focus-visible:outline-none
-                      focus-visible:ring-2
-                      focus-visible:ring-accent
-                      focus-visible:ring-offset-2
-                      focus-visible:ring-offset-surface-dark
-                    '
-                  >
-                    <FaGithub aria-hidden='true' />
-                  </a>
-                </li>
-              </ul>
+              <SocialLinks tema='escuro' className='mt-5' />
             </section>
           </div>
 
