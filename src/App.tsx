@@ -12,8 +12,8 @@ function App() {
       <Header />
       <Hero />
       <SobreMim />
-      <Certificados />
       <Habilidades />
+      <Certificados />
       <Projetos />
       <Footer />
     </>
