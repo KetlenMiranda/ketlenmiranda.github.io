@@ -205,7 +205,7 @@ Error generating stack: `+e.message+`
           focus-visible:ring-2\r
           focus-visible:ring-accent\r
           focus-visible:ring-offset-2\r
-        `})]})}function qe({certificado:e,onFechar:t}){let n=(0,_.useRef)(null),r=e.destaques.find(e=>e.link);(0,_.useEffect)(()=>{let e=n.current;e&&!e.open&&e.showModal()},[]);let i=()=>{n.current?.close()};return(0,x.jsx)(`dialog`,{ref:n,id:`modal-certificado-${e.id}`,"aria-labelledby":`titulo-modal-${e.id}`,onClose:t,onClick:e=>{e.target===e.currentTarget&&i()},className:`\r
+        `})]})}function qe({certificado:e,onFechar:t}){let n=(0,_.useRef)(null),r=e.destaques.find(e=>e.link);(0,_.useEffect)(()=>{let e=n.current;return e&&!e.open&&e.showModal(),()=>{e?.open&&e.close()}},[]);function i(){n.current?.close()}return(0,x.jsx)(`dialog`,{ref:n,id:`modal-certificado-${e.id}`,"aria-labelledby":`titulo-modal-${e.id}`,onClose:t,onCancel:e=>{e.preventDefault(),i()},onClick:e=>{e.target===e.currentTarget&&i()},className:`\r
         m-auto max-h-[90vh]\r
         w-[calc(100%-2rem)] max-w-4xl\r
         overflow-y-auto rounded-2xl\r
@@ -213,7 +213,7 @@ Error generating stack: `+e.message+`
         bg-primary p-0 text-foreground\r
         shadow-2xl\r
         backdrop:bg-surface-dark/70\r
-      `,children:(0,x.jsxs)(`div`,{className:`relative p-6 sm:p-8`,children:[(0,x.jsx)(`button`,{type:`button`,"aria-label":`Fechar detalhes da pesquisa`,onClick:i,className:`\r
+      `,children:(0,x.jsxs)(`div`,{className:`relative p-6 sm:p-8`,children:[(0,x.jsx)(`button`,{type:`button`,"aria-label":`Fechar detalhes do certificado`,onClick:i,className:`\r
             absolute right-4 top-4\r
             flex h-11 w-11 items-center\r
             justify-center rounded-full\r
@@ -226,23 +226,23 @@ Error generating stack: `+e.message+`
           `,children:(0,x.jsx)(`span`,{"aria-hidden":`true`,children:`×`})}),(0,x.jsxs)(`header`,{className:`pr-12`,children:[(0,x.jsx)(`p`,{className:`\r
               text-sm font-bold uppercase\r
               tracking-[0.18em] text-accent\r
-            `,children:`Pesquisa acadêmica`}),(0,x.jsx)(`h2`,{id:`titulo-modal-${e.id}`,className:`\r
+            `,children:e.categoria}),(0,x.jsx)(`h2`,{id:`titulo-modal-${e.id}`,className:`\r
               mt-3 text-2xl font-bold\r
               leading-tight text-foreground\r
               sm:text-3xl\r
-            `,children:e.titulo}),(0,x.jsx)(`p`,{className:`mt-3 font-semibold text-accent`,children:e.instituicao})]}),(0,x.jsxs)(`section`,{"aria-labelledby":`titulo-detalhes-${e.id}`,className:`mt-8 border-t border-border pt-6`,children:[(0,x.jsx)(`h3`,{id:`titulo-detalhes-${e.id}`,className:`\r
-              text-sm font-bold uppercase\r
-              tracking-[0.15em] text-foreground\r
-            `,children:`Detalhes`}),(0,x.jsx)(`dl`,{className:`\r
-              mt-4 grid grid-cols-1 gap-4\r
-              sm:grid-cols-2\r
-            `,children:e.detalhes.map(e=>(0,x.jsxs)(`div`,{className:`\r
-                  rounded-lg border border-border\r
-                  bg-white/50 p-4\r
-                `,children:[(0,x.jsx)(`dt`,{className:`\r
-                    text-xs font-bold uppercase\r
-                    tracking-[0.12em] text-accent\r
-                  `,children:e.rotulo}),(0,x.jsx)(`dd`,{className:`mt-2 text-sm leading-relaxed text-muted`,children:e.valor})]},e.rotulo))})]}),e.destaques.length>0&&(0,x.jsxs)(`section`,{"aria-labelledby":`titulo-destaques-${e.id}`,className:`mt-8 border-t border-border pt-6`,children:[(0,x.jsx)(`h3`,{id:`titulo-destaques-${e.id}`,className:`\r
+            `,children:e.titulo}),(0,x.jsx)(`p`,{className:`mt-3 font-semibold text-accent`,children:e.instituicao})]}),e.detalhes.length>0&&(0,x.jsxs)(`section`,{"aria-labelledby":`titulo-detalhes-${e.id}`,className:`mt-8 border-t border-border pt-6`,children:[(0,x.jsx)(`h3`,{id:`titulo-detalhes-${e.id}`,className:`\r
+                text-sm font-bold uppercase\r
+                tracking-[0.15em] text-foreground\r
+              `,children:`Detalhes`}),(0,x.jsx)(`dl`,{className:`\r
+                mt-4 grid grid-cols-1 gap-4\r
+                sm:grid-cols-2\r
+              `,children:e.detalhes.map(e=>(0,x.jsxs)(`div`,{className:`\r
+                    rounded-lg border border-border\r
+                    bg-white/50 p-4\r
+                  `,children:[(0,x.jsx)(`dt`,{className:`\r
+                      text-xs font-bold uppercase\r
+                      tracking-[0.12em] text-accent\r
+                    `,children:e.rotulo}),(0,x.jsx)(`dd`,{className:`mt-2 text-sm leading-relaxed text-muted`,children:e.valor})]},e.rotulo))})]}),e.destaques.length>0&&(0,x.jsxs)(`section`,{"aria-labelledby":`titulo-destaques-${e.id}`,className:`mt-8 border-t border-border pt-6`,children:[(0,x.jsx)(`h3`,{id:`titulo-destaques-${e.id}`,className:`\r
                 text-sm font-bold uppercase\r
                 tracking-[0.15em] text-foreground\r
               `,children:`Destaques`}),(0,x.jsx)(`ul`,{className:`mt-4 space-y-3`,children:e.destaques.map(e=>(0,x.jsxs)(`li`,{className:`\r
@@ -257,10 +257,15 @@ Error generating stack: `+e.message+`
               `,children:`Fotos da apresentação`}),(0,x.jsx)(`ul`,{className:`\r
                 mt-4 grid grid-cols-1 gap-4\r
                 sm:grid-cols-2\r
-              `,children:e.fotos.map(e=>(0,x.jsx)(`li`,{children:(0,x.jsx)(`img`,{src:e.src,alt:e.alt,loading:`lazy`,className:`\r
-                      aspect-[4/3] w-full\r
-                      rounded-lg object-cover\r
-                    `})},e.src))})]}),(0,x.jsxs)(`div`,{className:`\r
+              `,children:e.fotos.map(e=>(0,x.jsx)(`li`,{children:(0,x.jsx)(`a`,{href:e.src,target:`_blank`,rel:`noreferrer`,"aria-label":`${e.alt}. Abrir imagem em uma nova guia`,className:`\r
+                      block overflow-hidden rounded-lg\r
+                      focus-visible:outline-none\r
+                      focus-visible:ring-2\r
+                      focus-visible:ring-accent\r
+                    `,children:(0,x.jsx)(`img`,{src:e.src,alt:e.alt,loading:`lazy`,className:`\r
+                        aspect-[4/3] w-full\r
+                        rounded-lg object-cover\r
+                      `})})},e.src))})]}),(0,x.jsxs)(`footer`,{className:`\r
             mt-8 flex flex-col gap-3\r
             border-t border-border pt-6\r
             sm:flex-row\r
@@ -275,7 +280,7 @@ Error generating stack: `+e.message+`
                 focus-visible:ring-2\r
                 focus-visible:ring-accent\r
                 focus-visible:ring-offset-2\r
-              `,children:`Ver publicação`}),(0,x.jsx)(`a`,{href:e.linkCertificado??e.imagem,target:`_blank`,rel:`noreferrer`,"aria-label":`Ver certificado da pesquisa ${e.titulo} em uma nova guia`,className:`\r
+              `,children:`Ver publicação`}),(0,x.jsx)(`a`,{href:e.linkCertificado??e.capa,target:`_blank`,rel:`noreferrer`,"aria-label":`Ver certificado: ${e.titulo}`,className:`\r
               inline-flex min-h-11\r
               items-center justify-center\r
               rounded-lg border border-accent\r
