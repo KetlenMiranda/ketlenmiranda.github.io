@@ -1,4 +1,9 @@
-export type { DetalheProjeto, FotoProjeto, Projeto } from './projetos';
+export type {
+  DetalheProjeto,
+  FotoProjeto,
+  LinkProjeto,
+  Projeto,
+} from './projetos';
 
 export {
   jardimInterativo,

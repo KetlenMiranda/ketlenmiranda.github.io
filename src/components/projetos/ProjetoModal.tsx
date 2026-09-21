@@ -11,7 +11,7 @@ import DemonstracaoProjeto from './modal/DemonstracaoProjeto';
 import DetalhesProjeto from './modal/DetalhesProjeto';
 import FotosProjeto from './modal/FotosProjeto';
 import FuncionalidadesProjeto from './modal/FuncionalidadesProjeto';
-import RepositorioProjeto from './modal/RepositorioProjeto';
+import LinksProjeto from './modal/LinksProjeto';
 import TecnologiasProjeto from './modal/TecnologiasProjeto';
 
 type ProjetoModalProps = {
@@ -72,7 +72,7 @@ export default function ProjetoModal({ projeto, onFechar }: ProjetoModalProps) {
 
           <FotosProjeto projeto={projeto} />
 
-          <RepositorioProjeto projeto={projeto} />
+          <LinksProjeto projeto={projeto} />
         </div>
       </article>
     </div>
