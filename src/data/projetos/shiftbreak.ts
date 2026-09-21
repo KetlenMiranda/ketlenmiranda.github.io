@@ -45,7 +45,8 @@ export const shiftbreak: Projeto = {
     },
     {
       rotulo: 'Plataforma',
-      valor: 'Disponível diretamente na plataforma s&box',
+      valor:
+        'Disponível diretamente na plataforma s&box, que pode ser instalada pela Steam.',
     },
   ],
 
@@ -58,12 +59,21 @@ export const shiftbreak: Projeto = {
     'Progressão que incentiva testar novas rotas e estratégias a cada tentativa.',
   ],
 
+  links: [
+    {
+      rotulo: 'Ver página no s&box',
+      url: 'https://sbox.game/overnightgames/shiftbreak',
+    },
+  ],
+
   demonstracao: 'https://www.youtube.com/embed/wKOfiSZ9o5Q',
 
   demonstracaoTitulo: 'Demonstração do jogo',
 
   demonstracaoDescricao:
     'Trailer da versão enviada para a Game Jam III do s&box. Recomendado assistir com som.',
+
+  fotosTitulo: 'Imagens do jogo',
 
   fotos: [
     {

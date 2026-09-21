@@ -4,7 +4,12 @@ import { shiftbreak } from './shiftbreak';
 
 import type { Projeto } from './tipos';
 
-export type { DetalheProjeto, FotoProjeto, Projeto } from './tipos';
+export type {
+  DetalheProjeto,
+  FotoProjeto,
+  LinkProjeto,
+  Projeto,
+} from './tipos';
 
 export { jardimInterativo, methodusRsl, shiftbreak };
 
