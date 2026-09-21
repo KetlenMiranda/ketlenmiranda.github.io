@@ -8,6 +8,11 @@ export type FotoProjeto = {
   alt: string;
 };
 
+export type LinkProjeto = {
+  rotulo: string;
+  url: string;
+};
+
 export type Projeto = {
   id: string;
   categoria: string;
@@ -22,8 +27,10 @@ export type Projeto = {
   funcionalidades: string[];
   aviso?: string;
   repositorio?: string;
+  links?: LinkProjeto[];
   demonstracao?: string;
   demonstracaoTitulo?: string;
   demonstracaoDescricao?: string;
   fotos: FotoProjeto[];
+  fotosTitulo?: string;
 };

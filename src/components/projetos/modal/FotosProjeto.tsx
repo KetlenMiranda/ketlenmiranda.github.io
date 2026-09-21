@@ -2,6 +2,8 @@ import type { Projeto } from '../../../data/projetosData';
 
 import TituloSecaoModal from './TituloSecaoModal';
 
+const TITULO_PADRAO = 'Imagens do sistema';
+
 type FotosProjetoProps = {
   projeto: Projeto;
 };
@@ -13,9 +15,11 @@ export default function FotosProjeto({ projeto }: FotosProjetoProps) {
 
   const tituloId = `fotos-projeto-${projeto.id}`;
 
+  const titulo = projeto.fotosTitulo ?? TITULO_PADRAO;
+
   return (
     <section aria-labelledby={tituloId} className='border-t border-border pt-8'>
-      <TituloSecaoModal id={tituloId}>Imagens do sistema</TituloSecaoModal>
+      <TituloSecaoModal id={tituloId}>{titulo}</TituloSecaoModal>
 
       <ul
         className='
