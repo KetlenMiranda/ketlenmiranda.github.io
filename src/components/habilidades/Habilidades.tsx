@@ -37,18 +37,6 @@ export default function Habilidades() {
 
         <SectionTitle id='titulo-habilidades' title='Habilidades' />
 
-        <p
-          id='descricao-habilidades'
-          className='
-            mx-auto mt-7 max-w-2xl
-            text-center text-base leading-relaxed
-            text-muted
-          '
-        >
-          Tecnologias, ferramentas e conceitos que utilizo no desenvolvimento de
-          aplicações web.
-        </p>
-
         <ul
           className='
             mx-auto mt-12 max-w-6xl

@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import { projetos, type Projeto } from '../../data/projetosData';
 
-import CardDetalhes from '../CardDetalhes';
 import SectionTitle from '../SectionTitle';
+import ListaProjetos from './ListaProjetos';
 import ProjetoModal from './ProjetoModal';
 
 export default function Projetos() {
@@ -40,29 +40,10 @@ export default function Projetos() {
 
         <SectionTitle id='titulo-projetos' title='Projetos' />
 
-        <ul
-          className='
-            mx-auto mt-12 grid max-w-5xl
-            grid-cols-1 gap-6
-            sm:grid-cols-2
-            lg:grid-cols-3
-          '
-        >
-          {projetos.map((projeto) => (
-            <li key={projeto.id} className='h-full min-w-0'>
-              <CardDetalhes
-                id={`projeto-${projeto.id}`}
-                categoria={projeto.categoria}
-                titulo={projeto.titulo}
-                capa={projeto.capa}
-                capaAlt={projeto.capaAlt}
-                modalId={`modal-projeto-${projeto.id}`}
-                modoImagem='cover'
-                onVerDetalhes={() => setProjetoSelecionado(projeto)}
-              />
-            </li>
-          ))}
-        </ul>
+        <ListaProjetos
+          projetos={projetos}
+          onVerDetalhes={setProjetoSelecionado}
+        />
       </div>
 
       {projetoSelecionado && (
