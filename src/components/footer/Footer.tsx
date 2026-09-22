@@ -59,7 +59,7 @@ export default function Footer() {
               <h2
                 className='
                   text-xs font-bold uppercase
-                  tracking-[0.15em] text-accent
+                  tracking-[0.15em] text-accent-light
                   lg:text-center
                 '
               >
@@ -79,7 +79,7 @@ export default function Footer() {
                       className='
                         text-sm text-white/80
                         transition-colors
-                        hover:text-accent
+                        hover:text-accent-light
                         focus-visible:outline-none
                         focus-visible:ring-2
                         focus-visible:ring-accent
@@ -91,7 +91,7 @@ export default function Footer() {
                     </a>
 
                     {indice < linksRodape.length - 1 && (
-                      <span aria-hidden='true' className='text-accent'>
+                      <span aria-hidden='true' className='text-accent-light'>
                         •
                       </span>
                     )}
@@ -108,7 +108,7 @@ export default function Footer() {
                 id='titulo-contato-footer'
                 className='
                   text-xs font-bold uppercase
-                  tracking-[0.15em] text-accent
+                  tracking-[0.15em] text-accent-light
                 '
               >
                 Contato
@@ -120,7 +120,7 @@ export default function Footer() {
                   className='
                     mt-5 inline-block text-sm
                     text-white/80 transition-colors
-                    hover:text-accent
+                    hover:text-accent-light
                     focus-visible:outline-none
                     focus-visible:ring-2
                     focus-visible:ring-accent
@@ -156,7 +156,7 @@ export default function Footer() {
                 type='button'
                 onClick={() => setPoliticaAberta(true)}
                 className='
-                  text-accent
+                  text-accent-light
                   underline-offset-4
                   hover:underline
                   focus-visible:outline-none
