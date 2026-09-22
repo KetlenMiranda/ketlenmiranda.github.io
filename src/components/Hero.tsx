@@ -1,4 +1,3 @@
-import fotoHero from '../assets/hero/fotoHero.png';
 import SocialLinks from './SocialLinks';
 
 export default function Hero() {
@@ -80,7 +79,7 @@ export default function Hero() {
                 inline-flex min-h-12 w-full
                 items-center justify-center gap-2
                 rounded-lg px-5 py-3
-                font-semibold text-accent
+                font-semibold text-accent-strong
                 transition-colors duration-200
                 hover:bg-accent/10
                 focus-visible:outline-none
@@ -107,7 +106,17 @@ export default function Hero() {
           '
         >
           <img
-            src={fotoHero}
+            src='/hero/fotoHero-600.webp'
+            srcSet='
+              /hero/fotoHero-400.webp 400w,
+              /hero/fotoHero-600.webp 600w,
+              /hero/fotoHero-900.webp 900w,
+              /hero/fotoHero-1200.webp 1200w
+            '
+            sizes='(min-width: 768px) min(55vw, calc((100vh - 3.5rem) * 0.5556)), min(100vw, 17.8rem)'
+            width={1500}
+            height={2700}
+            fetchPriority='high'
             alt='Retrato de Ketlen Miranda'
             className='
               max-h-[32rem] w-full

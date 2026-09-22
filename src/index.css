@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 
@@ -7,6 +6,8 @@
     --color-primary: #D8D8D8;
     --color-surface-dark: #18131d;
     --color-accent: #7251b5;
+    --color-accent-strong: #633f9e;
+    --color-accent-light: #a58be0;
     --color-foreground: #19171b;
     --color-muted: #5f5964;
     --color-border: #c8c1cc;
