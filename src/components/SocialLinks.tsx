@@ -1,6 +1,7 @@
 import {
   FaEnvelope,
   FaGithub,
+  FaGitlab,
   FaGraduationCap,
   FaInstagram,
   FaLinkedin,
@@ -11,6 +12,12 @@ export const linksSociais = [
     nome: 'GitHub',
     href: 'https://github.com/KetlenMiranda',
     Icone: FaGithub,
+    novaAba: true,
+  },
+  {
+    nome: 'GitLab',
+    href: 'https://gitlab.com/costaketlen46',
+    Icone: FaGitlab,
     novaAba: true,
   },
   {
