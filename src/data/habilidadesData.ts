@@ -16,12 +16,13 @@ import {
   SiPhp,
   SiPostgresql,
   SiReact,
+  SiSass,
   SiTailwindcss,
   SiTypescript,
   SiVite,
 } from 'react-icons/si';
 
-import { TbApi } from 'react-icons/tb';
+import { TbApi, TbBrandCSharp } from 'react-icons/tb';
 
 export type Habilidade = {
   nome: string;
@@ -49,6 +50,11 @@ export const gruposHabilidades: GrupoHabilidades[] = [
         nome: 'CSS3',
         icone: FaCss3Alt,
         cor: '#1572B6',
+      },
+      {
+        nome: 'SCSS',
+        icone: SiSass,
+        cor: '#CC6699',
       },
       {
         nome: 'JavaScript',
@@ -90,6 +96,11 @@ export const gruposHabilidades: GrupoHabilidades[] = [
         nome: 'Laravel',
         icone: SiLaravel,
         cor: '#FF2D20',
+      },
+      {
+        nome: 'C#',
+        icone: TbBrandCSharp,
+        cor: '#512BD4',
       },
       {
         nome: 'APIs REST',
