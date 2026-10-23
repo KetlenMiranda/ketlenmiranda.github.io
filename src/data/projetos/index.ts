@@ -1,4 +1,5 @@
 import { jardimInterativo } from './jardimInterativo';
+import { legacyOfPirates } from './legacyOfPirates';
 import { methodusRsl } from './methodusRsl';
 import { shiftbreak } from './shiftbreak';
 
@@ -11,7 +12,12 @@ export type {
   Projeto,
 } from './tipos';
 
-export { jardimInterativo, methodusRsl, shiftbreak };
+export { jardimInterativo, legacyOfPirates, methodusRsl, shiftbreak };
 
 /** Ordem de exibição dos projetos na seção "Projetos". */
-export const projetos: Projeto[] = [methodusRsl, jardimInterativo, shiftbreak];
+export const projetos: Projeto[] = [
+  methodusRsl,
+  jardimInterativo,
+  shiftbreak,
+  legacyOfPirates,
+];

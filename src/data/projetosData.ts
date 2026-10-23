@@ -7,6 +7,7 @@ export type {
 
 export {
   jardimInterativo,
+  legacyOfPirates,
   methodusRsl,
   projetos,
   shiftbreak,
